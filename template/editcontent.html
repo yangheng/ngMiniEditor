@@ -1,0 +1,23 @@
+<div class="module type-text" ng-click="cover" >
+    <ul class="tools nav nav-pills">
+        <li ng-click="up($index)"><a href="javascript:void(0)">上移</a></li>
+        <li ng-click="down($index)"><a href="javascript:void(0)">下移</a></li>
+        <li ng-click="remove($index)"><a href="javascript:void(0)">删除</a></li>
+    </ul>
+    <div class="content">
+        <div class="text-div" ng-if="editcontent.type=='text'">
+            <p ng-bind-html="editcontent.value"></p>
+
+        </div>
+        <div class="image-div" ng-if="editcontent.type=='image'">
+            <img ng-src="{{editcontent.src}}" />
+        </div>
+        <div class="shortDesc-dev" ng-if="editcontent.type=='shortDesc'">
+            <span class="glyphicon glyphicon-list-alt">
+            </span>
+            <span ng-bind-html="editcontent.value"></span>
+
+        </div>
+    </div>
+    <div class="cover"></div>
+</div>

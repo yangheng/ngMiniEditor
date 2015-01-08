@@ -1,0 +1,71 @@
+/*color*/
+@gray-color:#F6F7FB;
+@black-color:black;
+@height:333px;
+@width:290px;
+.origin-editor{
+  height: @height;
+  background: #fff;
+  border: 1px solid #b2dba1;
+}
+.edit-type{
+  margin-top: 115px;
+}
+.edit-control{
+  width: @width;
+}
+.content-edit{
+  max-height: @height;
+  overflow-y: scroll;
+  width: @width;
+  border: 1px solid #b2dba1;
+  .wrap{
+    min-height: @height;
+    height: auto;
+    .module{
+      display: block;
+      position: relative;
+      margin-bottom: 5px;
+      .tools{
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        z-index: 999;
+        display: none;
+        li{
+          background-color:#ffffff ;
+        }
+      }
+      .cover{
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        z-index: 99;
+        background: #000000;
+        opacity: 0.7;
+        display: none;
+      }
+      .content{
+        .image-div{
+          max-height: 193px;
+          max-width: 290px;
+          img{
+            display: block;
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .module:hover{
+      .tools{
+        display: block;
+      }
+      .cover{
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+<li class="list-group-item">
+    <div class="row">
+        <div class="col-lg-5">
+            <div class="origin-editor" contenteditable="true" ng-model="minieditor.replace"></div>
+            <div class="code-check">
+                <button class="btn btn-info">源码速查</button>
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <select  ng-model="minieditor.type" name="type" ng-options="select.value as select.name for select in selects" class="form-control edit-type">
+               <!-- <option value="">替换</option>
+                <option value="">向下替换</option>
+                <option value="">向上替换</option>-->
+            </select>
+        </div>
+        <div class="col-lg-5">
+            <div class="content-edit" >
+                <div class="wrap">
+                    <editcontent ng-repeat="editcontent in minieditor.editcontents">
+
+                    </editcontent>
+                </div>
+            </div>
+            <div class="edit-control">
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default" ng-click="addType=0">
+                            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                            单图
+                        </button>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default" ng-click="addType=1">
+                            <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+                            双图
+                        </button>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default" ng-click="addType=2">
+                            <span class="glyphicon glyphicon-text-width" aria-hidden="true"></span>
+                            文字
+                        </button>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default" ng-click="addType=3">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            摘要
+                        </button>
+                    </div>
+                </div>
+
+                <div ng-if="addType==0">
+                    单图
+                </div>
+                <div ng-if="addType==1">
+                    双图
+                </div>
+                <div ng-if="addType==2">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">文字</div>
+                        <div class="panel-body">
+                            <textarea class="form-control" ng-model="text"></textarea>
+                        </div>
+                        <div class="panel-footer">
+                            <button type="button" class="btn btn-info" ng-click="creatContent('text',text)">
+                                <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                                添加
+                            </button>
+                            <button type="button" class="btn btn-default" ng-click="addType=4">
+                                <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                                取消
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div ng-if="addType==3">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">摘要</div>
+                        <div class="panel-body">
+                            <textarea class="form-control" ng-model="shortDesc"></textarea>
+                        </div>
+                        <div class="panel-footer">
+                            <button type="button" class="btn btn-info" ng-click="creatContent('shortDesc',shortDesc)">
+                                <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                                添加
+                            </button>
+                            <button type="button" class="btn btn-default" ng-click="addType=4">
+                                <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                                    取消
+                            </button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</li>
+

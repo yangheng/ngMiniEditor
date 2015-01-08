@@ -1,0 +1,64 @@
+/*color*/
+.origin-editor {
+  height: 333px;
+  background: #fff;
+  border: 1px solid #b2dba1;
+}
+.edit-type {
+  margin-top: 115px;
+}
+.edit-control {
+  width: 290px;
+}
+.content-edit {
+  max-height: 333px;
+  overflow-y: scroll;
+  width: 290px;
+  border: 1px solid #b2dba1;
+}
+.content-edit .wrap {
+  min-height: 333px;
+  height: auto;
+}
+.content-edit .wrap .module {
+  display: block;
+  position: relative;
+  margin-bottom: 5px;
+}
+.content-edit .wrap .module .tools {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  z-index: 999;
+  display: none;
+}
+.content-edit .wrap .module .tools li {
+  background-color: #ffffff ;
+}
+.content-edit .wrap .module .cover {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index: 99;
+  background: #000000;
+  opacity: 0.7;
+  display: none;
+}
+.content-edit .wrap .module .content .image-div {
+  max-height: 193px;
+  max-width: 290px;
+}
+.content-edit .wrap .module .content .image-div img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.content-edit .wrap .module:hover .tools {
+  display: block;
+}
+.content-edit .wrap .module:hover .cover {
+  display: block;
+}
+/*# sourceMappingURL=editor.css.map */
